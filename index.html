@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Serwis Techniczny</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+:root{
+--navy:#0f172a;
+--blue:#2563eb;
+--light:#f5f7fb;
+--gray:#e5e7eb;
+}
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Inter, sans-serif;
+}
+
+body{
+background:white;
+color:#111;
+line-height:1.6;
+}
+
+.container{
+width:90%;
+max-width:1200px;
+margin:auto;
+}
+
+/* NAV */
+
+nav{
+position:sticky;
+top:0;
+background:white;
+border-bottom:1px solid var(--gray);
+z-index:100;
+}
+
+.nav-inner{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:18px 0;
+}
+
+.logo{
+font-weight:700;
+font-size:20px;
+color:var(--navy);
+}
+
+nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+nav a{
+text-decoration:none;
+color:#333;
+font-weight:500;
+}
+
+.phone{
+font-weight:600;
+color:var(--blue);
+}
+
+/* HERO */
+
+.hero{
+padding:120px 0;
+background:linear-gradient(135deg,#0f172a,#1e3a8a);
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:48px;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:20px;
+opacity:.9;
+margin-bottom:40px;
+}
+
+.buttons{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+}
+
+.btn{
+padding:14px 28px;
+border-radius:6px;
+font-weight:600;
+text-decoration:none;
+transition:.3s;
+}
+
+.btn-primary{
+background:var(--blue);
+color:white;
+}
+
+.btn-primary:hover{
+transform:translateY(-2px);
+box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+.btn-secondary{
+border:2px solid white;
+color:white;
+}
+
+.btn-secondary:hover{
+background:white;
+color:#111;
+}
+
+/* SERVICES */
+
+section{
+padding:80px 0;
+}
+
+.section-title{
+text-align:center;
+font-size:32px;
+margin-bottom:60px;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:35px;
+border-radius:10px;
+box-shadow:0 8px 25px rgba(0,0,0,.05);
+text-align:center;
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-6px);
+box-shadow:0 15px 35px rgba(0,0,0,.1);
+}
+
+.card i{
+font-size:32px;
+color:var(--blue);
+margin-bottom:15px;
+}
+
+/* FEATURES */
+
+.features{
+background:var(--light);
+}
+
+.feature{
+text-align:center;
+padding:20px;
+}
+
+.feature i{
+font-size:30px;
+color:var(--blue);
+margin-bottom:15px;
+}
+
+/* ABOUT */
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:10px;
+}
+
+/* AREA */
+
+.area{
+background:var(--light);
+text-align:center;
+}
+
+.cities{
+display:flex;
+justify-content:center;
+gap:20px;
+flex-wrap:wrap;
+font-weight:500;
+}
+
+/* CONTACT */
+
+.contact{
+text-align:center;
+}
+
+.phone-big{
+font-size:36px;
+font-weight:700;
+color:var(--blue);
+margin-bottom:20px;
+}
+
+form{
+max-width:500px;
+margin:auto;
+display:flex;
+flex-direction:column;
+gap:15px;
+}
+
+input,textarea{
+padding:12px;
+border:1px solid var(--gray);
+border-radius:6px;
+font-size:14px;
+}
+
+textarea{
+height:120px;
+resize:none;
+}
+
+button{
+padding:14px;
+border:none;
+background:var(--blue);
+color:white;
+font-weight:600;
+border-radius:6px;
+cursor:pointer;
+}
+
+button:hover{
+opacity:.9;
+}
+
+/* FOOTER */
+
+footer{
+background:var(--navy);
+color:white;
+padding:40px 0;
+text-align:center;
+font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+.hero h1{
+font-size:36px;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+nav ul{
+display:none;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<nav>
+<div class="container nav-inner">
+<div class="logo">TECH-SERWIS</div>
+
+<ul>
+<li><a href="#">Usługi</a></li>
+<li><a href="#">O nas</a></li>
+<li><a href="#">Obszar</a></li>
+<li><a href="#">Kontakt</a></li>
+</ul>
+
+<div class="phone">📞 600 000 000</div>
+</div>
+</nav>
+
+<section class="hero">
+<div class="container">
+
+<h1>Profesjonalna obsługa techniczna obiektów</h1>
+
+<p>Szybki serwis, diagnostyka i naprawy dla firm oraz klientów prywatnych.</p>
+
+<div class="buttons">
+<a class="btn btn-primary" href="#">Zadzwoń teraz</a>
+<a class="btn btn-secondary" href="#">Poproś o wycenę</a>
+</div>
+
+</div>
+</section>
+
+<section>
+
+<div class="container">
+
+<h2 class="section-title">Nasze usługi</h2>
+
+<div class="grid">
+
+<div class="card">
+<i class="fa-solid fa-screwdriver-wrench"></i>
+<h3>Konserwacja techniczna</h3>
+<p>Regularne przeglądy i utrzymanie instalacji w pełnej sprawności.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-bolt"></i>
+<h3>Naprawy awaryjne</h3>
+<p>Szybka reakcja na awarie i natychmiastowe usuwanie usterek.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-plug"></i>
+<h3>Instalacje</h3>
+<p>Montaż i modernizacja instalacji technicznych.</p>
+</div>
+
+<div class="card">
+<i class="fa-solid fa-magnifying-glass"></i>
+<h3>Diagnostyka</h3>
+<p>Precyzyjna analiza problemów i optymalizacja systemów.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section class="features">
+
+<div class="container">
+
+<h2 class="section-title">Dlaczego my</h2>
+
+<div class="grid">
+
+<div class="feature">
+<i class="fa-solid fa-clock"></i>
+<h3>Szybka reakcja</h3>
+<p>Serwis dostępny nawet tego samego dnia.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-user-gear"></i>
+<h3>Doświadczenie</h3>
+<p>Wieloletnia praktyka w obsłudze technicznej.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-receipt"></i>
+<h3>Transparentne ceny</h3>
+<p>Jasna wycena bez ukrytych kosztów.</p>
+</div>
+
+<div class="feature">
+<i class="fa-solid fa-location-dot"></i>
+<h3>Lokalna firma</h3>
+<p>Działamy szybko na terenie regionu.</p>
+</div>
+
+</div>
+</div>
+</section>
+
+<section>
+
+<div class="container about">
+
+<img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" alt="serwis">
+
+<div>
+<h2>O naszej firmie</h2>
+
+<p>
+Jesteśmy lokalną firmą techniczną specjalizującą się w obsłudze
+instalacji oraz naprawach serwisowych. Naszym celem jest szybkie
+i skuteczne rozwiązywanie problemów technicznych klientów.
+</p>
+
+<p>
+Obsługujemy zarówno firmy, jak i klientów indywidualnych,
+zapewniając profesjonalną pomoc techniczną.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="area">
+
+<div class="container">
+
+<h2 class="section-title">Obszar działania</h2>
+
+<div class="cities">
+<span>Warszawa</span>
+<span>Pruszków</span>
+<span>Piaseczno</span>
+<span>Legionowo</span>
+<span>Otwock</span>
+<span>Wołomin</span>
+</div>
+
+</div>
+
+</section>
+
+<section class="contact">
+
+<div class="container">
+
+<h2 class="section-title">Kontakt</h2>
+
+<div class="phone-big">600 000 000</div>
+
+<p>kontakt@techserwis.pl</p>
+
+<br>
+
+<form>
+
+<input type="text" placeholder="Imię">
+
+<input type="tel" placeholder="Telefon">
+
+<textarea placeholder="Wiadomość"></textarea>
+
+<button>Wyślij zapytanie</button>
+
+</form>
+
+</div>
+
+</section>
+
+<footer>
+
+TECH-SERWIS  
+📞 600 000 000  
+✉ kontakt@techserwis.pl  
+
+<br><br>
+
+© 2026 Wszystkie prawa zastrzeżone
+
+</footer>
+
+</body>
+</html>
