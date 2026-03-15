@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 200">
+  
+  <style>
+    .navy { fill: #0f172a; }
+    .text { 
+      font-family: "Futura PT", "Futura", Arial, sans-serif; 
+      font-weight: 700; 
+      letter-spacing: 2px;
+    }
+  </style>
+
+  <!-- Crane tower -->
+  <rect class="navy" x="80" y="40" width="10" height="80"></rect>
+
+  <!-- Crane arm -->
+  <rect class="navy" x="80" y="40" width="110" height="8"></rect>
+
+  <!-- Counter arm -->
+  <rect class="navy" x="60" y="40" width="20" height="8"></rect>
+
+  <!-- Cable -->
+  <rect class="navy" x="180" y="48" width="3" height="25"></rect>
+
+  <!-- Hook -->
+  <circle class="navy" cx="181.5" cy="78" r="4"></circle>
+
+  <!-- Text -->
+  <text x="220" y="95" font-size="48" class="navy text">
+    ART-KRAN
+  </text>
+
+</svg>
